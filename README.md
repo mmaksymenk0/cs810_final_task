@@ -28,13 +28,13 @@ python3 -m pip install -r requirements.txt
 
 | Вхід | SHA-256 |
 |------|---------|
-| "" | e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 |
-| "abc" | ba7816bf8f01cfea414140de5dae2ec73b00361bbef0469348423f656b97f55c |
-| "hello world" | b94d27b9934d3e08a52e52d7da7dabfac484efe04294e576f36d1ca52b96a8bc |
-| "give my friend 2 bitcoins for a pizza" | 4941a019ff6dae9c05ce621111b74576be6a4eb4669ed0096ea28c3de63c5cc7 |
-| "follow the white rabbit" | pass — перевірено автоматично |
-| "u" * 55 | pass — рівно один блок після паддингу |
-| "u" * 56 | pass — два блоки, крайовий випадок |
+| `""` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| `"abc"` | `ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad` |
+| `"hello world"` | `b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9` |
+| `"give my friend 2 bitcoins for a pizza"` | `4941a019ff6dae9c05ce621111b74576be6a4eb4669ed0096ea28c3de63c5cc7` |
+| `"follow the white rabbit"` | `bfc6f97e4dfa5e6535c1de0af2f687e1767b2873dc0219dd6aa16e60d7534434` |
+| `"u" * 55` | `0ca01ee60257d2191b570046a2bcab086c75ebab545f8d690840265385594699` |
+| `"u" * 56` | `8715318f741444913b0c10e87db38ad144fc37b5b9b07162516269d1c2c7deec` |
 
 Результат тестування: 8/8 passed
 
@@ -95,7 +95,7 @@ PSS вирішує ці проблеми: Спочатку хешуємо пов
 message:   give my friend 2 bitcoins for a pizza
 sig len:   256 bytes (2048-bit key)
 
-verify correct message:  pass
+verify correct message: pass
 verify tampered message: fail (expected)
 signatures differ (pss is random): True
 both verify: True
@@ -112,10 +112,9 @@ both verify: True
 
 key size: 8192 bits
 message:  give my friend 2 bitcoins for a pizza
-ciphertext: 1024 bytes - saved to encrypted.bin
+ciphertext (1024 bytes): saved to encrypted.bin
 
-
-розшифрувати може тільки власник відповідного приватного ключа.
+Розшифрувати може тільки власник відповідного приватного ключа.
 
 
 ## Завдання 5 - OpenSSL ключ, CSR та self-signed certificate
